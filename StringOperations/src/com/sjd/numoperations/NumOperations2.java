@@ -37,14 +37,7 @@ public class NumOperations2 {
 	  public int getMinPalindrome() {
 		  int minPalindrome = Collections.min(list);
 		  return minPalindrome;
-	  }
-	  public void showList() {
-		  for (Integer e : list) {
-		  System.out.println(e);
-		  }
-	  }
-	
-	
+	  }	  		
 }
 
 
