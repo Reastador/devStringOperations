@@ -51,9 +51,9 @@ public class MultiColumn {
 			amountOfEruption[k] = eruption.charAt(0);
 			eruptionValueContainer = new String(amountOfEruption);
 		}
-		System.out.println(emptyValuecontainer + multieplier1);
+		System.out.println(" " + String.format("%5d",multieplier1));
 		System.out.println("x ");
-		System.out.println(emptyValuecontainer + multieplier2);
+		System.out.println(" " + String.format("%5d",multieplier2));
 		System.out.println(" " + eruptionValueContainer);
 		for(int i = chars.length -1 ;i >=0;i--) {	
 			int reverseValue = Character.getNumericValue(chars[i]);
