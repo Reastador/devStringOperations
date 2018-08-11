@@ -58,8 +58,8 @@ public class MultiColumn {
 		for(int i = chars.length -1 ;i >=0;i--) {	
 			int reverseValue = Character.getNumericValue(chars[i]);
 			int result = multieplier1 * reverseValue;
-			String d = emptyValuecontainer.substring(0, i);
-			System.out.println(" " + d + result);
+			String emptyConteinerSubstring = emptyValuecontainer.substring(0, i);
+			System.out.println(" " + emptyConteinerSubstring + result);
 			if(i>0) {
 				System.out.println("+");
 			}else System.out.println(" " + eruptionValueContainer);
