@@ -1,17 +1,15 @@
 package com.sjd.multiplicationintocolumn;
 
-public class MultiColumn {
+public class MultiColumn2 {
 
-	
-    
-	public void multiplicationIntoColumn(int multiplier1,int multiplier2) {
+	public String multiplicationIntoColumn(int multiplier1,int multiplier2) {
 		int multiResult = multiplier1*multiplier2;
 		String operationResult = Integer.toString(multiResult);
 		String emptyValuecontainer = null;
 		String eruptionValueContainer = null;
 		String emptyValue = " ";
         String eruption = "_";
-        String checkLength = " ";
+        String checkLength = "    ";
 		String num = Integer.toString(multiplier2);
 		char [] chars = num.toCharArray();
 		char [] empty = num.toCharArray();
@@ -26,10 +24,12 @@ public class MultiColumn {
 			amountOfEruption[k] = eruption.charAt(0);
 			eruptionValueContainer = new String(amountOfEruption);
 		}
-		System.out.println(" " + emptyValuecontainer + multiplier1);
-		System.out.println("x ");
-		System.out.println(" " + emptyValuecontainer + multiplier2);
-		System.out.println(" " + eruptionValueContainer);
+		String header =" " + emptyValuecontainer + String.format("%3d",multiplier1) + "\n" +
+		"x " + "\n" +
+		" " + emptyValuecontainer + String.format("%3d",multiplier2) + "\n" +
+		" " + eruptionValueContainer;
+		
+		String mathProcess = "";
 		
 		for(int i = chars.length -1 ;i >=0;i--) {	
 			int reverseValue = Character.getNumericValue(chars[i]);
@@ -38,18 +38,20 @@ public class MultiColumn {
 			String emptyConteinerSubstring = emptyValuecontainer.substring(0, i);
 			
 			if(resultToString.length() >= checkLength.length()) {
-			System.out.println(" " + emptyConteinerSubstring + resultToString);
+			mathProcess +=" " + emptyConteinerSubstring + resultToString + "\n";
 			
-			}else System.out.println("  " + emptyConteinerSubstring + resultToString);
+			}else mathProcess +="  " + emptyConteinerSubstring + resultToString + "\n";
 			
 			checkLength = resultToString;
 			
 			if(i>0) {
-				System.out.println("+");
-			}else System.out.println(" " + eruptionValueContainer);
+			mathProcess +=	"+" + "\n";
+			}else mathProcess +=" " + eruptionValueContainer;
+			
 		}
 
-		System.out.println(" " + multiResult);		
+		String footer = " " + multiResult;		
+		return header + "\n" + mathProcess + "\n" + footer;
 	}
-
+	
 }
