@@ -65,7 +65,7 @@ public class MultiColumn {
 			}else System.out.println(" " + eruptionValueContainer);
 		}
 		
-		System.out.println(" " + multieplier1*multieplier2);
+		System.out.println(" " + multiResult);
 
 	}
 
